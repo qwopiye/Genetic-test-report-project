@@ -1,32 +1,29 @@
-import { useEffect, useState } from 'react';
-import './App.css';
+import { BrowserRouter ,Routes,Route} from "react-router";
+//import './App.css';
+
+import Homes from "./component/Home";
+import TestForm from "./component/Paitent";
+import Navber from "./component/Navber/Navber";
+
 
 function App() {
-  const [user, setUser] = useState([]); 
 
-  useEffect(() => {
-    fetch("/api/user")
-      .then(res => res.json())
-      .then(json => setUser(json))
-      .then(json => console.log(json))
-      .catch(err => console.error("Error fetching users:", err));
-  }, []);
 
   return (
-    <div className="App">
-      <h1>Genetic</h1>
-      {user.length > 0 ? (
-        user.map((data) => (
-          <div key={data.id}>
-            <h1>Name: {data.name}</h1>
-            <p >Username: {data.username}</p>
-            <p>Email: {data.email}</p>
-          </div>
-        ))
-      ) : (
-        <p>Loading users...</p>
-      )}
+
+    <div className="App-header">
+
+     
+      <BrowserRouter>
+      <Navber/>
+        <Routes>
+          <Route path="/home" element={<Homes/>}/>
+          <Route path="/login" element={<TestForm/>}/>
+        </Routes>
+      </BrowserRouter>
+
     </div>
+    
   );
 }
 
