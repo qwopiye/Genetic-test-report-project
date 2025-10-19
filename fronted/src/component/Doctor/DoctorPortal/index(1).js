@@ -17,7 +17,7 @@ function DoctorPortal() {
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>Welcome, Dr. {doctorName}</h1>
-      <p>✅ This is your Doctor Portal</p>
+      <p style={{fontSize:"2rem"}}>Only Doctor </p>
     </div>
   );
 }

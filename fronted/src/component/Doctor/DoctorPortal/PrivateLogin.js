@@ -25,7 +25,7 @@ function PrivateLogin() {
       <button onClick={handleLogout} style={{ padding: "8px 20px", marginTop: "20px", background: "red", color: "white" }}>
         Logout
       </button>
-      <p>✅ This is your Doctor Portal</p>
+      <p>✅ Only Doctor</p>
     </div>
   );
 }
