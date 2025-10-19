@@ -71,12 +71,12 @@ const TestForm = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "auto" }}>
+    <div className='form-container'>
       <h2>Paitent Information</h2>
 
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Patient Name:</label>
+          <label >Patient Name:</label>
           <input
             type="text"
             name="patientName"
@@ -117,7 +117,7 @@ const TestForm = () => {
           )}
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Login</button>
       </form>
 
       {submitted && <p style={{ color: "green" }}>Form submitted successfully!</p>}

@@ -1,17 +1,58 @@
 .home {
- background-image: url('../Photo/home1.jpeg');
-   background-size: cover;   
+  background-image: url('../Photo/home1.jpeg');
+  background-size: cover;   
   background-position: center;  
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 200vh;
   padding: 0;
   margin: 0;
 }
 h1{
   text-align: center;
   justify-content: center;
+}
+.card-container1{
+  background-color: #1D2A35;
+  width: 20%;
+  height: 35%;
+  border-radius: 10px;
+}
+
+.card-container1:hover{
+  background-color:#04AA6D;
+}
+.card-container{
+  
+  background-color: #1D2A35;
+  width: 20%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.card-container:hover{
+  background-color:#04AA6D;
+}
+.card {
+
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
 
 }
+ /* @media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}  */
+
+ h2,h3,p{
+  font-size: larger;
+} 
 .footer {
   width: 100%;
   background: #1f2937;
@@ -50,4 +91,46 @@ h1{
 .falinkedin:hover{
   transform: scale(1.1);
   opacity: 0.85;
+}
+
+table {
+    width: 100%;
+    
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+td{
+    font-weight: 500px;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+#vehicles {
+    margin-top: 20px;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    /* Change the hover background color as needed */
+}
+
+.amount {
+    font-weight: bold;
+    color: #3498db;
+    /* Change the color as needed */
+}
+
+.amount:hover {
+    text-decoration: underline;
+}
+.from{
+    font-size: bolder;
 }

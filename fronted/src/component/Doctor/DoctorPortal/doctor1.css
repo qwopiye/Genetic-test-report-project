@@ -1,0 +1,18 @@
+.name{
+    width:30%;
+    padding: 8px;
+    margin: 10px;
+}
+.name1{
+    width: 30%;
+    padding: 8px;
+    margin: 10px;
+}
+.bnt{
+    padding: "8px 20px";
+    background-color: "black";
+    color: "white"
+}
+.bnt:hover{
+    background-color:white;
+}

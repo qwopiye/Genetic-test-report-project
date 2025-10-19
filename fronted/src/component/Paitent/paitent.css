@@ -11,17 +11,17 @@
 
 /* Main form container */
 .form-container {
-  background-color: #f2f2f2;
-  padding: 30px 40px;
-  border-radius: 16px;
+  background-color:#1D2A35;
+ 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  width: 400px;
-  text-align: center;
+  width: 100%;
+   text-align: center; 
   animation: fadeIn 0.5s ease-in;
+  
 }
 
 h2 {
-  color: #4a47a3;
+  color: white;
   margin-bottom: 25px;
   font-size: 40px;
   font-weight: 600;
@@ -33,16 +33,18 @@ h2 {
 }
 .name{
     font-size: 20px;
+    width: 400px;
 }
 .genetic{
     font-size: 20px;
+    width: 400px;
 }
 
 label {
   display: block;
   font-size: 30px;
   margin-bottom: 6px;
-  color: #333;
+  color: white;
   font-weight: 500;
 }
 
@@ -84,6 +86,13 @@ textarea {
 .submit-btn:hover {
   background: linear-gradient(90deg, #3a3790, #5851db);
   transform: scale(1.02);
+}
+button{
+  background-color: #04AA6D;
+  width: 100px;
+  height: 50px;
+  font-size: larger;
+  cursor:pointer;
 }
 
 .error-text {

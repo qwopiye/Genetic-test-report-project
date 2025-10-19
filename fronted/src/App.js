@@ -4,6 +4,10 @@ import { BrowserRouter ,Routes,Route} from "react-router";
 import Homes from "./component/Home";
 import TestForm from "./component/Paitent";
 import Navber from "./component/Navber/Navber";
+import Doctor from "./component/Doctor";
+
+import PrivateLogin from "./component/Doctor/DoctorPortal/PrivateLogin";
+import PrivateRoute from "./component/Doctor/DoctorPortal/PrivateRoute";
 
 
 function App() {
@@ -19,6 +23,15 @@ function App() {
         <Routes>
           <Route path="/home" element={<Homes/>}/>
           <Route path="/login" element={<TestForm/>}/>
+          <Route path="/doctor" element={<Doctor/>}/>
+          <Route
+          path="/doctor-portal"
+          element={
+            <PrivateRoute>
+              <PrivateLogin />
+            </PrivateRoute>
+          }
+        />
         </Routes>
       </BrowserRouter>
 

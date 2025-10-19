@@ -7,6 +7,7 @@ const Navber = () => {
        <nav>
         <NavLink to={"/home"} className='nav_link'> Home</NavLink>
         <NavLink to={"/login"} className='nav_link'>Patient Information</NavLink>
+        <NavLink to={"/doctor"} className='nav_link'>Doctor</NavLink>
        </nav>
     </div>
   )
