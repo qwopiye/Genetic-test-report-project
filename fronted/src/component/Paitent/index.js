@@ -76,9 +76,10 @@ const TestForm = () => {
 
       <form onSubmit={handleSubmit}>
         <div>
-          <label >Patient Name:</label>
+          
           <input
             type="text"
+            placeholder='Enter the Name'
             name="patientName"
             className='name'
             value={formData.patientName}
@@ -91,9 +92,10 @@ const TestForm = () => {
         </div>
 
         <div>
-          <label>Age:</label>
+          
           <input
             type="number"
+            placeholder='Enter the Age'
             className='name'
             name="age"
             value={formData.age}
@@ -104,9 +106,10 @@ const TestForm = () => {
         </div>
 
         <div>
-          <label>Genetic Markers:</label>
+          
           <textarea
             name="geneticMarkers"
+            placeholder='Problem'
             className='genetic'
             value={formData.geneticMarkers}
             onChange={handleChange}

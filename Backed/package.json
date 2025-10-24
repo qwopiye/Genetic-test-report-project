@@ -2,7 +2,6 @@
   "name": "backed",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
@@ -11,8 +10,14 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "body-parser": "^2.2.0",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "express-validation": "^4.1.1",
+    "mongodb": "^6.20.0",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.10",
+    "uuid": "^13.0.0"
   }
 }

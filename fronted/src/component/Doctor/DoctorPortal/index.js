@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 function DoctorLogin() {
   const [name, setName] = useState("");
   const [doctorId, setDoctorId] = useState("");
-  const [doctorPass, setDoctorPassword] = useState("");
+  const [doctorPass, setDoctorPassword] = useState("");                                          
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -17,7 +17,6 @@ function DoctorLogin() {
     if (name !== "" && doctorId !== "" && doctorPass!=="") {
      localStorage.setItem("doctorName", name);
     
-
       navigate("/doctor-portal");
     } else {
       alert("Please Fill Information");
@@ -72,4 +71,6 @@ function DoctorLogin() {
 export default DoctorLogin;
 
 
-   
+
+
+

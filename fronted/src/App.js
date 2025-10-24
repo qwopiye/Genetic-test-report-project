@@ -1,5 +1,6 @@
 import { BrowserRouter ,Routes,Route} from "react-router";
 //import './App.css';
+import { useEffect, useState } from "react";
 
 import Homes from "./component/Home";
 import TestForm from "./component/Paitent";
@@ -11,7 +12,16 @@ import PrivateRoute from "./component/Doctor/DoctorPortal/PrivateRoute";
 
 
 function App() {
-
+  const[data ,setData]=useState(null);
+ useEffect(() => {
+    fetch('http://localhost:3000/home')
+      .then(res => res.json())
+      .then(data => {
+        setData(data);
+        setLoading(false);
+      });
+  }, []);
+ 
 
   return (
 
