@@ -1,10 +1,12 @@
-const { GetAlluser,CreatAlluser } = require("../Controller/user.controller")
+const { GetAlluser,CreatAlluser, UpdateOneuser, DeleteOneuser } = require("../Controller/user.controller")
 
 const router=require("express").Router()
 
-router.get("/",GetAlluser)
+//route of get , post ,put ,delete http method
+
+// router.get("/",GetAlluser)
 router.post("/",CreatAlluser)
-// router.put()
-// router.delete()
+// router.put("/:id", UpdateOneuser)
+// router.delete("/:id", DeleteOneuser)
 
 module.exports=router

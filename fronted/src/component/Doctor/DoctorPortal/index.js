@@ -41,6 +41,7 @@ function DoctorLogin() {
        <div>
            <input
           type="number"
+          name="ID"
           placeholder="Enter Doctor ID"
           value={doctorId}
           onChange={(e) => setDoctorId(e.target.value)}
@@ -52,6 +53,7 @@ function DoctorLogin() {
         <div>
             <input
           type="password"
+          name="Password"
           placeholder="Password"
           value={doctorPass}
           onChange={(e) => setDoctorPassword(e.target.value)}
