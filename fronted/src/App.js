@@ -1,6 +1,6 @@
 import { BrowserRouter ,Routes,Route} from "react-router";
-//import './App.css';
-
+import './App.css';
+ //import './homestyle.css'
 
 import Homes from "./component/Home";
 import TestForm from "./component/Paitent";
@@ -20,8 +20,6 @@ function App() {
   return (
 
     <div className="App-header">
-
-     
       <BrowserRouter>
       <Navber/>
         <Routes>
@@ -41,11 +39,25 @@ function App() {
 
         </Routes>
       </BrowserRouter>
-
+    <Home/>
+  
     </div>
+
+       
+        
+       
     
   );
 }
+const Home=()=>{
+  return(
+    <div>
+  <h1 style={{"color":"red"}}>Sohan</h1>
+ </div>
+  )
+ 
+}
 
 export default App;
+
 

@@ -2,8 +2,10 @@
  import React, { useState } from 'react';
  import './paitent.css'
 
- const TestForm = () => {
 
+
+ const TestForm = () => {
+   
     const [formData, setFormData] = useState({
      patientName: "",
      age: "",
@@ -68,6 +70,14 @@
        setTimeout(() => setSubmitted(false), 3000);
      }
    };
+  //  useEffect(()=>{
+  //    const FatchFrom= async()=>{
+  //     const res=await axios.get('http://localhost:3000/User');
+  //     setData(res.data)
+  //    }
+     
+  //    FatchFrom();
+  //  },[])
 
    return (
      <div className='form-container'>
@@ -79,7 +89,7 @@
             <input
             type='text'
             className='name'
-            name='Name'
+            name='name'
             placeholder='Enter the name'
             value={formData.name}
             onChange={handleChange}
@@ -125,6 +135,7 @@
        </form>
 
        {submitted && <p style={{ color: "green" }}>Form submitted successfully!</p>}
+       {/* {data.age} */}
      </div>
    );
  };

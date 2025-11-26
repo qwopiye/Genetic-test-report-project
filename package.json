@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "uuid": "^13.0.0"
-  }
+  },
+  "name": "genetic-test-report",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qwopiye/Genetic-test-report-project.git"
+  },
+  "author": "Sohan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qwopiye/Genetic-test-report-project/issues"
+  },
+  "homepage": "https://github.com/qwopiye/Genetic-test-report-project#readme",
+  "description": ""
 }
