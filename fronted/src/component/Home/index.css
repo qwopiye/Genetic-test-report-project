@@ -3,7 +3,7 @@
   background-size: cover;   
   background-position: center;  
   background-repeat: no-repeat;
-  height: 200vh;
+  height: 100vh;
   padding: 0;
   margin: 0;
 }
@@ -105,6 +105,8 @@ td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    color: black;
+    font-size:larger;
 }
 td{
     font-weight: 500px;

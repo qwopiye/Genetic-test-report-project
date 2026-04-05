@@ -4,19 +4,21 @@ const morgan=require("morgan")
 const createError= require('http-errors')
 const latelimit=require('express-rate-limit')
 const bodyParser=require("body-parser")
-
+const cookieParser = require("cookie-parser");
 
 
 const userRouter=require('./Router/userRoute')
 const seedRouter = require("./Router/seedRouter")
 const errorResponse=require('./Controller/ResponseController')
-
-
+const authRouter = require("./Router/authRouteer")
+const doctorRouter = require("./Router/doctorRouter")
+const predictrouter = require("./Router/predictionRoutes")
 
 
 const app=express()
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 
 const limitlates=latelimit({
@@ -39,7 +41,11 @@ app.get("/users", (req, res) => {
     res.json([{ name: "Sohan", email: "sohan@example.com" }]);
 });
 
- app.use("/api/user",userRouter)
+ app.use("/genetic/patient",userRouter)
+app.use("/genetic/patient/auth",authRouter)
+app.use("/genetic/doctor",doctorRouter)
+app.use("/genetic/report",predictrouter)
+
 
  app.use("/api/seed",seedRouter)
 
@@ -49,17 +55,14 @@ app.use((req,res,next)=>{
    createError(404,"route not fount")
     next()
 })
-app.use((err,req,res,next)=>{
-//    return res.status(err.status || 500).json({
-//     sucess: false,
-//     message:err.message
+app.use((err, req, res, next) => {
+  const statusCode = err.status || 500;
 
-//    });
-   return errorResponse(res,{
-    statuCode:err.status,
-    message:err.message
-   });
-   
+  res.status(statusCode).json({
+    success: false,
+    message: err.message || "Internal Server Error",
+  });
 });
+
 
 module.exports=app

@@ -7,12 +7,12 @@ const Homes = () => {
   return (
     <div className='home'>
      
-      <h1> the genetic test</h1>
+
       
      
      
-         <Card1/>
-        <Card2/>
+         {/* <Card1/>
+        <Card2/> */}
       <Serves/>
       <Footer/>
     </div>
@@ -88,56 +88,56 @@ const Serves = () => {
     
 
 }
-const Card2=()=>{
-  return(
-    <div className='card-container'>
-    <div className='card'>
-      <h1>Doctor Information1</h1>
+// const Card2=()=>{
+//   return(
+//     <div className='card-container'>
+//     <div className='card'>
+//       <h1>Doctor Information1</h1>
       
-        <h3>Doctor Name</h3>
-        <h3>Dr: Karim </h3>
-        <p> Vizit Time : 2:00 PM - 4:00 PM </p>
-        <p><i>DNA Spacelist</i></p>
-     </div>
+//         <h3>Doctor Name</h3>
+//         <h3>Dr: Karim </h3>
+//         <p> Vizit Time : 2:00 PM - 4:00 PM </p>
+//         <p><i>DNA Spacelist</i></p>
+//      </div>
 
-    <div className='card'>
-      <h1>Doctor Information</h1>
+//     <div className='card'>
+//       <h1>Doctor Information</h1>
       
-        <h3>Doctor Name</h3>
-        <h3>Dr: Karim </h3>
-        <p> Vizit Time : 2:00 PM - 4:00 PM </p>
-        <p><i>DNA Spacelist</i></p>
-     </div>
-       <div className='card'>
-      <h1>Doctor Information</h1>
+//         <h3>Doctor Name</h3>
+//         <h3>Dr: Karim </h3>
+//         <p> Vizit Time : 2:00 PM - 4:00 PM </p>
+//         <p><i>DNA Spacelist</i></p>
+//      </div>
+//        <div className='card'>
+//       <h1>Doctor Information</h1>
       
-        <h3>Doctor Name</h3>
-        <h3>Dr: Karim </h3>
-        <p> Vizit Time : 2:00 PM - 4:00 PM </p>
-        <p><i>DNA Spacelist</i></p>
-     </div>
-</div>
+//         <h3>Doctor Name</h3>
+//         <h3>Dr: Karim </h3>
+//         <p> Vizit Time : 2:00 PM - 4:00 PM </p>
+//         <p><i>DNA Spacelist</i></p>
+//      </div>
+// </div>
   
-  )
-}
+//   )
+// }
 
- const Card1=()=>{
-   return(
- <div className='card-container'>
-     <div className='card'>
-       <h1>Doctor Information</h1>
-      <div>
-         <h3>Doctor Name</h3>
-         <h3>Dr: Karim </h3>
-         <p> Vizit Time : 2:00 PM - 4:00 PM </p>
-         <p><i>DNA Spacelist</i></p>
-       </div>
-     </div>
+//  const Card1=()=>{
+//    return(
+//  <div className='card-container'>
+//      <div className='card'>
+//        <h1>Doctor Information</h1>
+//       <div>
+//          <h3>Doctor Name</h3>
+//          <h3>Dr: Karim </h3>
+//          <p> Vizit Time : 2:00 PM - 4:00 PM </p>
+//          <p><i>DNA Spacelist</i></p>
+//        </div>
+//      </div>
   
- </div>
+//  </div>
  
-   )
- }
+//    )
+//  }
 
 
 

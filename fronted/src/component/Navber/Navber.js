@@ -8,6 +8,9 @@ const Navber = () => {
         <NavLink to={"/home"} className='nav_link'> Home</NavLink>
         <NavLink to={"/login"} className='nav_link'>Patient Information</NavLink>
         <NavLink to={"/doctor"} className='nav_link'>Doctor</NavLink>
+        <NavLink to={"/info"} className='nav_link'>Information</NavLink>
+        <NavLink to={'/uploadreport'} className='nav_link'>UploadReport</NavLink>
+
        </nav>
     </div>
   )

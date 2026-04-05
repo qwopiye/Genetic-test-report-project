@@ -12,6 +12,10 @@ import Doctor from "./component/Doctor";
 
 import PrivateLogin from "./component/Doctor/DoctorPortal/PrivateLogin";
 import PrivateRoute from "./component/Doctor/DoctorPortal/PrivateRoute";
+import Info from "./component/Information"
+import Dashboard from "./component/UploadReport/dashBoard";
+
+
 
 
 function App() {
@@ -26,6 +30,8 @@ function App() {
           <Route path="/home" element={<Homes/>}/>
           <Route path="/login" element={<TestForm/>}/>
           <Route path="/doctor" element={<Doctor/>}/>
+          <Route path="/info" element={<Info/>}/>
+          <Route path="/uploadreport" element={<Dashboard/>} />
           <Route
           path="/doctor-portal"
           element={
