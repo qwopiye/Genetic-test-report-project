@@ -1,0 +1,108 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 10px 30px;
+}
+
+/* Logo */
+.logo {
+  color: #38bdf8;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: pink;
+}
+
+.nav-links a.active {
+  color: red;
+}
+
+/* Button */
+.btn {
+  background: #38bdf8;
+  color: black !important;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Profile */
+.profile {
+  position: relative;
+  margin-left: 20px;
+}
+
+/* Profile Icon */
+.profile-icon {
+  font-size: 30px;
+  color: #38bdf8;
+  cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 6px;
+  width: 150px;
+  z-index: 1000; /* 🔥 IMPORTANT */
+}
+
+.dropdown p {
+  color: white;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.dropdown p:hover {
+  color: #38bdf8;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background: black;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}

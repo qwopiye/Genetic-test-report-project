@@ -5,10 +5,15 @@
   "name": "genetic-test-report",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "server": "npm run dev --prefix server",
+  "client": "npm run dev --prefix client",
+  "dev": "concurrently \"npm run server\" \"npm run client\""
+},
+  "devDependencies": {
+    "concurrently": "^10.0.3"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qwopiye/Genetic-test-report-project.git"

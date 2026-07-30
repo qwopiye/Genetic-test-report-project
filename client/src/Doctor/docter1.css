@@ -1,0 +1,99 @@
+/* PAGE BACKGROUND */
+.doctor-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN CARD */
+.doctor-card {
+  display: flex;
+  width: 850px;
+  background: #111827;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+/* LEFT SIDE */
+.doctor-left {
+  flex: 1;
+  background: linear-gradient(135deg, #0ea5e9, #10b981);
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.doctor-left h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.doctor-left p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* RIGHT SIDE */
+.doctor-right {
+  flex: 1;
+  padding: 40px;
+  color: white;
+}
+
+/* TITLE */
+.doctor-right h2 {
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.sub {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.doctor-right input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #1f2937;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.doctor-right input:focus {
+  border: 1px solid #38bdf8;
+}
+
+/* BUTTON */
+.doctor-right button {
+  width: 100%;
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.doctor-right button:hover {
+  background: #0ea5e9;
+}
+.login-footer a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
