@@ -39,14 +39,14 @@ app.use(express.urlencoded({extended: true}))
 
 
 
-app.use("/genetic/patient",userRouter)
+// app.use("/genetic/patient",userRouter)
 app.use("/genetic/doctor/auth",authRouter)  
 app.use("/genetic/doctor",doctorRouter)
 app.use("/genetic/report",predictrouter)
 app.use('/genetic/doctor/profile/', profileRoutes);
 
 
- app.use("/api/seed",seedRouter)
+//  app.use("/api/seed",seedRouter)
 
 
 

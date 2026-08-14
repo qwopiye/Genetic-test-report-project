@@ -39,7 +39,7 @@ const Navber = () => {
 
         {profileOpen && (
           <div className="dropdown">
-            <p onClick={() => navigate("/dashboard")}>My Dashboard</p>
+            <p onClick={() => navigate("/login")}>My Dashboard</p>
             <p onClick={() => navigate("/my-profile")}>My Profile</p>
             <p onClick={handleLogout}>Logout</p>
           </div>
