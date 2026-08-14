@@ -217,13 +217,13 @@ npm install
 
 # Create .env file
 cat > .env << 'EOF'
-PORT=5000
+PORT=3000
 NODE_ENV=development
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/genetic-test-db
 JWT_SECRET=your_jwt_secret_key_here
 JWT_EXPIRY=7d
 BCRYPT_ROUNDS=10
-FLASK_SERVICE_URL=http://localhost:5001
+FLASK_SERVICE_URL=http://localhost:3000
 RATE_LIMIT_WINDOW=15
 RATE_LIMIT_MAX=100
 EMAIL_SERVICE=gmail
@@ -232,8 +232,8 @@ EMAIL_PASS=your_app_password
 EOF
 
 # Start server
-npm start
-# Server runs on http://localhost:5000
+npm run dev
+# Server runs on http://localhost:3000
 ```
 
 ### 3. ML Microservice Setup (Flask Python)
@@ -243,7 +243,7 @@ npm start
 cd ../ml-service
 
 # Create virtual environment
-python3 -m venv venv
+python3 -m venv predict
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
@@ -252,7 +252,7 @@ pip install -r requirements.txt
 # Create .env file
 cat > .env << 'EOF'
 FLASK_ENV=development
-FLASK_PORT=5001
+FLASK_PORT=5000
 MODEL_PATH=./models/eye_cancer_rf_model.pkl
 SCALER_PATH=./models/feature_scaler.pkl
 LOG_LEVEL=INFO
@@ -260,7 +260,7 @@ EOF
 
 # Start Flask service
 python app.py
-# Service runs on http://localhost:5001
+# Service runs on http://localhost:5000
 ```
 
 ### 4. Frontend Setup (React)
@@ -274,14 +274,14 @@ npm install
 
 # Create .env file
 cat > .env << 'EOF'
-REACT_APP_API_URL=http://localhost:5000/api
-REACT_APP_ML_SERVICE_URL=http://localhost:5001/api
+REACT_APP_API_URL=http://localhost:5173/api
+REACT_APP_ML_SERVICE_URL=http://localhost:5173/api
 REACT_APP_VERSION=1.0.0
 EOF
 
 # Start development server
-npm start
-# Frontend runs on http://localhost:3000
+npm run dev
+# Frontend runs on http://localhost:5173
 ```
 
 ### 5. Docker Setup (Optional)
@@ -293,9 +293,9 @@ cd genetic-test-report
 docker-compose up --build
 
 # Services will start on:
-# - Frontend: http://localhost:3000
-# - Backend: http://localhost:5000
-# - Flask ML: http://localhost:5001
+# - Frontend: http://localhost5173:
+# - Backend: http://localhost:3000
+# - Flask ML: http://localhost:5000
 ```
 
 ---
@@ -307,20 +307,20 @@ docker-compose up --build
 #### Backend (.env)
 | Variable | Type | Default | Description |
 |----------|------|---------|-------------|
-| `PORT` | number | 5000 | Express server port |
+| `PORT` | number | 3000 | Express server port |
 | `MONGODB_URI` | string | - | MongoDB connection string |
 | `JWT_SECRET` | string | - | Secret key for JWT signing |
 | `JWT_EXPIRY` | string | 7d | Token expiration time |
 | `BCRYPT_ROUNDS` | number | 10 | Password hashing rounds |
-| `FLASK_SERVICE_URL` | string | http://localhost:5000 | ML service endpoint |
-| `RATE_LIMIT_WINDOW` | number | 15 | Rate limit window (minutes) |
+| `FLASK_SERVICE_URL` | string | http://localhost:3000 | ML service endpoint |
+| `RATE_LIMIT_WINDOW` | number | 5 | Rate limit window (minutes) |
 | `RATE_LIMIT_MAX` | number | 100 | Max requests per window |
 
 #### Flask ML Service (.env)
 | Variable | Type | Default | Description |
 |----------|------|---------|-------------|
 | `FLASK_ENV` | string | development | Environment mode |
-| `FLASK_PORT` | number | 5001 | Flask server port |
+| `FLASK_PORT` | number | 5000 | Flask server port |
 | `MODEL_PATH` | string | ./models/model.pkl | Path to trained model |
 | `SCALER_PATH` | string | ./models/scaler.pkl | Path to feature scaler |
 | `LOG_LEVEL` | string | INFO | Logging level |
@@ -378,7 +378,7 @@ curl -X POST http://localhost:3000/api/reports \
 ### Get AI Prediction
 
 ```bash
-curl -X POST http://localhost:5001/api/predict/eye-cancer \
+curl -X POST http://localhost:5000/api/predict/eye-cancer \
   -H "Content-Type: application/json" \
   -d '{
     "genetic_markers": ["PTEN_mutated", "TP53_wt"],
@@ -494,7 +494,7 @@ Encoding saved as: ml-service/models/feature_encoder.pkl
 ### Training Pipeline
 ```python
 # Preprocessing
-data → scaling → encoding → train/test split (80/20)
+data → scaling → encoding → train/test split (70/30)
 
 # Training
 RandomForest(n_estimators=200, max_depth=15, random_state=42)
@@ -733,7 +733,7 @@ sudo nano /etc/nginx/sites-available/default
 # Configure nginx to forward traffic to localhost:5000
 ```
 
-### Option 3: Kubernetes (Production Scale)
+### Option 3: Kubernetes (Production Scale(optional))
 
 ```bash
 # Deploy to K8s cluster
